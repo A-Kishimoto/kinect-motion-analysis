@@ -1,4 +1,4 @@
-partiname = ["Gao" "Jiang" "Kobayashi" "Mizuno" "Ohkawa" "Ohta" "Sakaguchi" "Sakurai" "Teraoka" "Torii" "Urata" "Watanabe" "Yamazaki"];
+partiname = ["A" "B" "C" "D" "E" "F" "G" "H" "I"];
 condition = ["Resting State (C1)" "Watching Music Performance Video (C2)" "Listening to Sound of Music Performance Video (C3)" "Watching Music Performance Video with Sound of Studio Version (C4)"];
 Dir = 'C:/Users/Kishimoto/Documents/MotionData3/';
 

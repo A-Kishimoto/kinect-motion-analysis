@@ -1,6 +1,4 @@
-partiname = ["Gao" "Kobayashi" "Mizuno" "Sakaguchi" "Torii" "Watanabe" "Yamazaki"];
-%partiname = ["Teraoka"];
-%partiname = ["Urata"];
+partiname = ["A" "B" "C" "D" "E" "F" "G" "H" "I"];
 Dir = 'C:/Users/Kishimoto/Documents/MotionData3/';
 duration = 8;
 TimeC1Start = -1000;

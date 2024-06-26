@@ -1,9 +1,21 @@
-# Analysis Programa of Kinect-Based Motion Data for MATLAB
-
-## Introduction
+# Analysis Programa of Kinect-Based Motion Data for MATLAB (Windows)
 
 ## Preparation for Analizing Kinect-Based Motion Data
 
+### Installation of SDK
+
+### Installation of KinZ-Matlab
+
 ## Analysis of Kinect-Based Motion Data
+
+### MotionActivityExporter.m
+
+### MotionActivityContinousConverter.m
+
+### MotionActivityPlot.m
+
+### MotionActivityCounter.m
+
+### MotionActivityCountMean.m
 
 ## Reference

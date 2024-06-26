@@ -1,4 +1,4 @@
-# Analysis Kinect-Based Motion Data for MATLAB®
+# Analysis Programa of Kinect-Based Motion Data for MATLAB
 
 ## Introduction
 

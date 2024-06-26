@@ -1,4 +1,4 @@
-# Analysis Program of Kinect-Based Motion Data for MATLAB (Windows)
+# Analysis Program of Kinect-Based Motion Data for MATLAB (Windows 11)
 
 ## Preparation for Analizing Kinect-Based Motion Data
 

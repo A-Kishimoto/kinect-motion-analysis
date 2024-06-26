@@ -4,7 +4,7 @@
 
 ### Installation of SDK
 
-### Installation of KinZ-Matlab
+### Installation and Modification of KinZ-Matlab
 
 ## Analysis of Kinect-Based Motion Data
 

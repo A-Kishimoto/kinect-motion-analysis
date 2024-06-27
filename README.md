@@ -1,4 +1,6 @@
-# Analysis Program of Kinect-Based Motion Data for MATLAB (Windows 11 & NVIDIA)
+# Analysis Programs of Kinect-Based Motion Data for MATLAB (Windows 11 & NVIDIA, with KinZ-Matlab)
+These programs were developed for analyzing kinect-based motion data recorded by Azure Kinect and MATLAB with KinZ-Matlab (by J.Treven, https://github.com/jrterven/KinZ-Matlab).  
+
 
 ## Preparation for Analizing Kinect-Based Motion Data
 

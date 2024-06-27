@@ -18,7 +18,7 @@ These programs were developed for analyzing kinect-based motion data recorded by
 
 ### MotionActivityExporter.m
 
-### MotionActivityContinousConverter.m
+### MotionActivityTimeAxisIntegrator.m
 
 ### MotionActivityPlot.m
 

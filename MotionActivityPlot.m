@@ -13,7 +13,7 @@ for p = 1:length(parts)
         for c = 1:length(condition)
             AllMA = zeros(length(partiname),1601);
             for parti = 1:length(partiname)
-                filename = append(Dir, partiname(parti), int2str(c), '_ContiMAMean',int2str(p),'Eq',int2str(e),'.txt');
+                filename = append(Dir, partiname(parti), int2str(c), '_IntegMAMean',int2str(p),'Eq',int2str(e),'.txt');
                 AllMA(parti,:) = readmatrix(filename);
             end
             AllMAMean = mean(AllMA);

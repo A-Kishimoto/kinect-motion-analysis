@@ -103,7 +103,7 @@ And
         % update depth figure
         d.im = imshow(depth, 'Parent', d.ax);
 ```
-If the renamed bodyTrackingDemo.m works, new folder is created and motion data of each joint's coordinate are exported in the file.
+   - If the renamed bodyTrackingDemo.m works, new folder is created and motion data of each joint's coordinate are exported in the file.
 
 ## Analysis of Kinect-Based Motion Data
 

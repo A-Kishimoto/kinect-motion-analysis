@@ -14,12 +14,15 @@ It is not necessary to install the newest version of SDK. Please check your comp
 3. Azure Kinect Body Tracking SDK ([*Download Azure Kinect Body Tracking SDK*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-sdk-download))  
 Same as Azure Kinect SDK, it is not necessary to install the newest version of SDK. Please check your computer's compatibility with the version of SDK (In this case, the version is 1.1.2.).  
 4. Setting up Path Environmental Variables  
-Directries of **k4a.dll** (normally, included in *C:\Program Files\Azure Kinect SDK v*(your version number)*\tools*) and **k4abt.dll** (normally, included in *C:\Program Files\Azure Kinect Body Tracking SDK\tools*) are needed to be added to path environmental variables.  
+Directries of **k4a.dll** (normally, included in *C:\Program Files\Azure Kinect SDK v*(your version number)*\tools*) and **k4abt.dll** (normally, included in *C:\Program Files\Azure Kinect Body Tracking SDK\tools*) are needed to be added to path environmental variables, and restart your computer.  
 
 ### Installation and Modification of KinZ-Matlab
-1. KinZ-Matlab ([*Download KinZ-Matlab*](https://github.com/jrterven/KinZ-Matlab))
+1. MATLAB ([*Download MATLAB*](https://www.mathworks.com/downloads/))  
+To install MATLAB, it is necessary to create your MathWorks account.  
+2. KinZ-Matlab ([*Download KinZ-Matlab*](https://github.com/jrterven/KinZ-Matlab))  
+After setting up C++ compiler by MATLAB, run **compile_for_windows.m** and check whether bodyTrackingDemo.m can run. Moreover, you might need to install Image Processing Toolbox plugin if bodyTrackingDemo.m does not work. If you want to get details, please refer to ([*here*](https://github.com/jrterven/KinZ-Matlab)).  
+3. Copying & Modifying bodyTrackingDemo.m  
 
-2. Modifying bodyTrackingDemo.m  
 
 ## Analysis of Kinect-Based Motion Data
 

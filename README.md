@@ -108,7 +108,7 @@ And
 After recording the motion data, you can analyze motion data by these programs for MATLAB.  
 
 ### Exporting Motion Data as txt File
-$\vec{m(k)} =
+$$\vec{m(k)} =
 \left(
 \begin{array}{c}
 |\vec{v_{1}(k)}| \\

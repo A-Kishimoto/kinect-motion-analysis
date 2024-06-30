@@ -1,4 +1,4 @@
-# Analysis Programs of Kinect-Based Motion Data for MATLAB (Windows 11 & NVIDIA, with KinZ-Matlab) (Work in Progress)
+# Analysis Programs of Kinect-Based Motion Data for MATLAB (Windows 11 & NVIDIA, with KinZ-Matlab)
 These programs were developed for analyzing kinect-based motion data recorded by Azure Kinect and MATLAB with [KinZ-Matlab](https://github.com/jrterven/KinZ-Matlab) (by J.Treven) in my work.  
 In These Programs, there are 2 types of analyzing motion data: **The time series graph of motion activity** and **the count of most shifting joint in
 each frame (using motion activity)**.
@@ -105,7 +105,7 @@ And
 ```
    - If the renamed bodyTrackingDemo.m works, new folder is created and motion data of each joint's coordinate are exported in the file.
 
-## Analysis of Kinect-Based Motion Data
+## Analysis of Kinect-Based Motion Data (Work in Progress)
 
 ### MotionActivityExporter.m
 

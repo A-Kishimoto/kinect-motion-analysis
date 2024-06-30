@@ -44,8 +44,65 @@ mex -setup c++
 
 **3. Copying & Modifying bodyTrackingDemo.m**  
   - If bodyTrackingDemo.m works, copy bodyTrackingDemo.m and rename (in this case, MotionRecording.m).
-  - 
+  - Modify the renamed bodyTrackingDemo.m like:
+```
+% Loop until pressing 'q' on any figure
+k=[];
 
+disp('Press q on color figure to exit')
+```
+↓  
+```
+% Loop until pressing 'q' on any figure
+k=[];
+
+%###Write the name and dirctry###
+name = '(Write name)';
+Dir = '(Write directry)';
+mkdir(Dir, name);
+frame = 0;
+%######
+
+disp('Press q on color figure to exit')
+```
+And  
+```
+    if validData
+        % Copy data to Matlab matrices        
+        [depth, depthTimestamp] = kz.getdepth;
+        [color, colorTimestamp] = kz.getcolor;
+        numBodies = kz.getnumbodies;
+        disp(numBodies)
+        bodies = kz.getbodies();
+
+        % update depth figure
+        d.im = imshow(depth, 'Parent', d.ax);
+```
+↓  
+```
+    if validData
+        % Copy data to Matlab matrices        
+        [depth, depthTimestamp] = kz.getdepth;
+        [color, colorTimestamp] = kz.getcolor;
+        numBodies = kz.getnumbodies;
+        disp(numBodies)
+        bodies = kz.getbodies();
+        
+        %######
+        strframe = int2str(frame);
+        filename1 = append(Dir, name,'\', strframe, '.mat');
+        save(filename1, 'bodies');
+        dt = datetime('now');
+        DateString1 = datestr(dt,'yyyyMMddHHmmssFFF');
+        DateString2 = string(dt);
+        filename2 = append(Dir, name,'\', strframe, '.txt');
+        writelines(DateString1, filename2);
+        writelines(DateString2, filename2,WriteMode="append");
+        %######
+
+        % update depth figure
+        d.im = imshow(depth, 'Parent', d.ax);
+```
 ## Analysis of Kinect-Based Motion Data
 
 ### MotionActivityExporter.m

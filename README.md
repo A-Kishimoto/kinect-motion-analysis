@@ -19,7 +19,7 @@ To use Azure Kinect, Several SDKs are needed to be installed.
 
 **4. Setting up Path Environmental Variables**  
   - Directries of **k4a.dll** (normally, included in *C:\Program Files\Azure Kinect SDK v*(your version number)*\tools*) and **k4abt.dll** (normally, included in *C:\Program Files\Azure Kinect Body Tracking SDK\tools*) are needed to be added to path environmental variables.  
-  - restart your computer.  
+  - Restart your computer.  
 
 ### Installation and Modification of KinZ-Matlab
 **1. MATLAB** ([*Download MATLAB*](https://www.mathworks.com/downloads/))  

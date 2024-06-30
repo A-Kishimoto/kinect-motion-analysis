@@ -108,21 +108,26 @@ And
 After recording the motion data, you can analyze motion data by these programs for MATLAB.  
 
 ### Exporting Motion Data as txt File
-$$\vec{m(k)} =
+$` 
+\vec{m(k)} =
 \left(
 \begin{array}{c}
 |\vec{v_{1}(k)}| \\
 |\vec{v_{2}(k)}| \\
 \vdots \\
 |\vec{v_{j}(k)}| \\
-\end{array} \right) \;\;\; (j = 1, 2, 3, \ldots, 32)$$
+\end{array} \right) \;\;\; (j = 1, 2, 3, \ldots, 32)$
+`$
 **Used Program**  
 - MotionActivityExporter.m   
 
 ### Time Series Graph of Motion Activity
+**Used Program**  
 - MotionActivityTimeAxisIntegrator.m  
 - MotionActivityPlot.m  
 
 ### Count of Most Shifting Joint in Each Frame (Using Motion Activity)
+**Used Program**  
 - MotionActivityCounter.m  
 - MotionActivityCountMean.m  
+

@@ -8,7 +8,7 @@ each frame (using motion activity)**.
 ### Installation of SDK
 To use Azure Kinect, Several SDKs are needed to be installed.  
 **1. CUDA (For NVIDIA)** ([*Download CUDA*](https://developer.nvidia.com/cuda-downloads?/))  
-CUDA is needed if you have yet to install. 
+CUDA is needed if you have yet to install.  
 **2. Azure Kinect SDK** ([*Download Azure Kinect SDK*](https://github.com/microsoft/Azure-Kinect-Sensor-SDK/blob/develop/docs/usage.md))  
 It is not necessary to install the newest version of SDK. Please check your computer's compatibility with the version of SDK (In this case, the version is 1.4.1.).  
 **3. Azure Kinect Body Tracking SDK** ([*Download Azure Kinect Body Tracking SDK*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-sdk-download))  

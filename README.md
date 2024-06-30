@@ -26,11 +26,18 @@ To use Azure Kinect, Several SDKs are needed to be installed.
   - To install MATLAB, it is necessary to create your MathWorks account.
 
 **2. KinZ-Matlab** ([*Download KinZ-Matlab*](https://github.com/jrterven/KinZ-Matlab))  
-  - After setting up C++ compiler by MATLAB, run **compile_for_windows.m** and check whether bodyTrackingDemo.m can run.  
+  - Set up compiler for C++ by MATLAB. How to compile is 3 ways below (choose only 1 way of compiling):  
+```
+mex -setup cpp
+mex -setup CPP
+mex -setup c++
+```
+  - Run **compile_for_windows.m** and check whether bodyTrackingDemo.m can run.  
   - You might need to install Image Processing Toolbox plugin if bodyTrackingDemo.m does not work.  
   - If you want to get details, please refer to [*here*](https://github.com/jrterven/KinZ-Matlab).  
 
 **3. Copying & Modifying bodyTrackingDemo.m**  
+  - If bodyTrackingDemo.m works, copy bodyTrackingDemo.m and rename (in this case, MotionRecording.m).
   - 
 
 ## Analysis of Kinect-Based Motion Data

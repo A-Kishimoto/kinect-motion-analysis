@@ -156,13 +156,13 @@ After that, you can draw the time series graph of motion activity's mean by MATL
 ### B. Count of Most Shifting Joint in Each Frame  
 $` 
 \begin{split}
-&\vec{s} =
+&\vec{C} =
 \left(
 \begin{array}{c}
-s_{1} \\
-s_{2} \\
+C_{1} \\
+C_{2} \\
 \vdots \\
-s_{j} \\
+C_{j} \\
 \end{array} \right)  \;\;\;
 &\vec{S} =
 \left(

@@ -1,6 +1,6 @@
 # Analysis Programs of Kinect-Based Motion Data for MATLAB (Windows 11 & NVIDIA, with KinZ-Matlab)
 These programs were developed for analyzing kinect-based motion data recorded by Azure Kinect and MATLAB with [KinZ-Matlab](https://github.com/jrterven/KinZ-Matlab) (by J.Treven) in my work.  
-In These Programs, there are 2 types of analyzing motion data: **Time series graph of motion activity** and **count of most shifting joint in each frame (using motion activity)**.
+In These Programs, there are 2 types of analyzing motion data: A. **Time series graph of motion activity** and B. **count of most shifting joint in each frame (using motion activity)**.
 
 ## Preparation for Analizing Kinect-Based Motion Data
 
@@ -106,7 +106,7 @@ And
 
 ## Analysis of Kinect-Based Motion Data (Work in Progress)
 After recording the motion data, you can analyze motion data by these programs for MATLAB.  
-At first, you have to export the data of motion activity's set by MATLAB, then you can get time series graph of motion activity or counts of most shifting joint in each frame.  
+At first, you have to export the data of motion activity's set by MATLAB, then you can get A. time series graph of motion activity or B. counts of most shifting joint in each frame.  
 
 ### Exporting Motion Data as txt File
 $` 
@@ -131,24 +131,29 @@ $`
 \end{array} \right) \;\;\; (j = 1, 2, 3, \ldots, 32)$
 `$ ... (2)  
 
-To analyze the motion data, I referred to the equation of the video viewer’s motion activity in [*Hanjalic’s study*](https://doi.org/10.1109/ICME.2003.1221610). The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
+To analyze the motion data, I referred to the equation of the video viewer’s motion activity in [*Hanjalic’s study*](https://doi.org/10.1109/ICME.2003.1221610).  
+The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
 - $`m(k)`$ : Set of each joint's motion activity (coordinate parallel moving distance) between kth to k+1th frames  
 - $`|\vec{v_{j}(k)}|`$ :Each joint’s motion activity between kth to k+1th frames  
 - $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints))  
 
-In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ . On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion.
+In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ .  
+On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion.
 
 **Used Program**  
 **- MotionActivityExporter.m**: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txt file which include set of motion activity calculated by each equation. 
 
-### Time Series Graph of Motion Activity
+### A. Time Series Graph of Motion Activity
 ![Time Series Graph of Motion Activity](img/MeanOfMotionActivity.png)
+As shown in the time series graph above, you can make the graph by 2 MATLAB's programs (MotionActivityTimeAxisIntegrator.m and MotionActivityPlot.m).  
+Before drawing the graph, the data of motion activity exported by MotionActivityExporter.m have inconstant interflame time, so the data have to be changed inconstant interflame time to 0.1 second interflame time.  
+After that, you can draw the time series graph of motion activity's mean by MATLAB.  
 
 **Used Program**  
-**- MotionActivityTimeAxisIntegrator.m**  
-**- MotionActivityPlot.m**  
+**- MotionActivityTimeAxisIntegrator.m**: Changing inconstant interflame time of the data of motion activity to 0.1 second interflame time of one 
+**- MotionActivityPlot.m**: Drawing the time series graph of motion activity.  
 
-### Count of Most Shifting Joint in Each Frame
+### B. Count of Most Shifting Joint in Each Frame
 **Used Program**  
 **- MotionActivityCounter.m**  
 **- MotionActivityCountMean.m**  

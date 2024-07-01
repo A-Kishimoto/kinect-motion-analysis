@@ -151,9 +151,26 @@ After that, you can draw the time series graph of motion activity's mean by MATL
 
 **Used Program**  
 - **MotionActivityTimeAxisIntegrator.m**: Changing inconstant interflame time of the data of motion activity to 0.1 second interflame time of one 
-- **MotionActivityPlot.m**: Drawing the time series graph of motion activity.  
+- **MotionActivityPlot.m**: Drawing the time series graph of motion activity  
 
-### B. Count of Most Shifting Joint in Each Frame
+### B. Count of Most Shifting Joint in Each Frame  
+$` 
+\begin{split}
+&\vec{S} =
+\left(
+\begin{array}{c}
+s_{1} \\
+s_{2} \\
+\vdots \\
+s_{j} \\
+\end{array} \right)  \;\;\; (j = 1, 2, 3, \ldots, 32)  \\
+&\mbox{initial value: }s_{j} = 0\\
+ \mbox{for }&k = 1, 2, 3, \ldots, K \\
+ \mbox{ if }&\max\vec{m(k)} = |\vec{v_{i}(k)}| \\
+&s_{i} = s_{i} + 1 \\
+ \end{split} 
+`$ ... (3)  
+
 **Used Program**  
 - **MotionActivityCounter.m**  
 - **MotionActivityCountMean.m**  

@@ -142,7 +142,7 @@ In Eq. (1), the motion activity is expressed in ratio of the average of the para
 **- MotionActivityExporter.m**: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txt file which include set of motion activity calculated by each equation. 
 
 ### Time Series Graph of Motion Activity
-![Time Series Graph of Motion Activity](img/MeanOfMotionData.png)
+![Time Series Graph of Motion Activity](img/MeanOfMotionActivity.png)
 
 **Used Program**  
 **- MotionActivityTimeAxisIntegrator.m**  

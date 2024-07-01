@@ -150,11 +150,11 @@ Before drawing the graph, the data of motion activity exported by MotionActivity
 After that, you can draw the time series graph of motion activity's mean by MATLAB.  
 
 **Used Program**  
-**- MotionActivityTimeAxisIntegrator.m**: Changing inconstant interflame time of the data of motion activity to 0.1 second interflame time of one 
-**- MotionActivityPlot.m**: Drawing the time series graph of motion activity.  
+- **MotionActivityTimeAxisIntegrator.m**: Changing inconstant interflame time of the data of motion activity to 0.1 second interflame time of one 
+- **MotionActivityPlot.m**: Drawing the time series graph of motion activity.  
 
 ### B. Count of Most Shifting Joint in Each Frame
 **Used Program**  
-**- MotionActivityCounter.m**  
-**- MotionActivityCountMean.m**  
+- **MotionActivityCounter.m**  
+- **MotionActivityCountMean.m**  
 

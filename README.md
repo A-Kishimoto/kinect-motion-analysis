@@ -164,7 +164,7 @@ C_{2} \\
 \vdots \\
 C_{j} \\
 \end{array} \right)  \;\;\;
-&\vec{S} =
+&\vec{s} =
 \left(
 \begin{array}{c}
 s_{1} \\

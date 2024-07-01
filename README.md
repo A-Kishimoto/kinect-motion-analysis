@@ -131,7 +131,7 @@ $`
 \end{array} \right) \;\;\; (j = 1, 2, 3, \ldots, 32)$
 `$ ... (2)  
 
-To analyze the motion data, I referred to the equation of the video viewer’s motion activity in (*Hanjalic’s study*)[https://doi.org/10.1109/ICME.2003.1221610]. The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
+To analyze the motion data, I referred to the equation of the video viewer’s motion activity in [*Hanjalic’s study*](https://doi.org/10.1109/ICME.2003.1221610). The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
 - $`m(k)`$ : Set of each joint's motion activity (coordinate parallel moving distance) between kth to k+1th frames  
 - $`|\vec{v_{j}(k)}|`$ :Each joint’s motion activity between kth to k+1th frames  
 - $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints))  

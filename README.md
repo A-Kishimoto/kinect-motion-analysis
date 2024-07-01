@@ -133,7 +133,8 @@ $`
 To analyze the motion data, I referred to the equation of the video viewer’s motion activity in (*Hanjalic’s study*)[https://doi.org/10.1109/ICME.2003.1221610]. The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
 - $`m(k)`$ : Motion activity () between kth to k+1th frames  
 - $`|\vec{v_{j}(k)}|`$ :Each joint’s coordinate parallel moving distance  
-- j: Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints))  
+- $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints))  
+
 In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ . On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion,
 
 **Used Program**  

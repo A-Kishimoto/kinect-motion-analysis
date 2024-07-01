@@ -134,7 +134,7 @@ $`
 To analyze the motion data, I referred to the equation of the video viewer’s motion activity in [*Hanjalic’s study*](https://doi.org/10.1109/ICME.2003.1221610).  
 The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
 - $`m(k)`$ : Set of each joint's motion activity (coordinate parallel moving distance) between kth to k+1th frames  
-- $`|\vec{v_{j}(k)}|`$ :Each joint’s motion activity between kth to k+1th frames  
+- $`|\vec{v_{j}(k)}|`$ : Each joint’s motion activity between kth to k+1th frames  
 - $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints))  
 
 In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ .  
@@ -156,6 +156,14 @@ After that, you can draw the time series graph of motion activity's mean by MATL
 ### B. Count of Most Shifting Joint in Each Frame  
 $` 
 \begin{split}
+&\vec{s} =
+\left(
+\begin{array}{c}
+s_{1} \\
+s_{2} \\
+\vdots \\
+s_{j} \\
+\end{array} \right)  \;\;\;
 &\vec{S} =
 \left(
 \begin{array}{c}
@@ -164,6 +172,7 @@ s_{2} \\
 \vdots \\
 s_{j} \\
 \end{array} \right)  \;\;\; (j = 1, 2, 3, \ldots, 32)  \\
+\\
 &\mbox{initial value: }s_{j} = 0\\
  \mbox{for }&k = 1, 2, 3, \ldots, K \\
  \mbox{ if }&\max\vec{m(k)} = |\vec{v_{i}(k)}| \\
@@ -171,7 +180,13 @@ s_{j} \\
  \end{split} 
 `$ ... (3)  
 
+Other analysis using motion activity is calculating the counts of most shifting joint in each frame. In 2 programs (MotionActivityCounter.m and MotionActivityCountMean.m), you can also  calculate scores of all joint’s count when the number of interflames is supposed to be 1.
+- $`\vec{C}`$ : The set of all joints' count of most shifting joint in each frame  
+- $`C_{j}`$ :Joint $`j`$ ’s count increasing by 1 when $`|\vec{v_{j}(k)}|`$ is maximum value in each frame. The initial value is 0.  
+- $`\vec{s}`$ : Scores of all joint’s count when $`\vec{s}`$ = 1
+- $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints)) 
+
 **Used Program**  
-- **MotionActivityCounter.m**  
-- **MotionActivityCountMean.m**  
+- **MotionActivityCounter.m** : Counting and exporting the number of each joint when the joint has most shifting joint in each frame
+- **MotionActivityCountMean.m** : Calculating and exporting the mean of counts and scores  
 

@@ -139,17 +139,17 @@ To analyze the motion data, I referred to the equation of the video viewer’s m
 In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ . On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion.
 
 **Used Program**  
-- MotionActivityExporter.m: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txt file which include set of motion activity calculated by each equation. 
+**- MotionActivityExporter.m**: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txt file which include set of motion activity calculated by each equation. 
 
 ### Time Series Graph of Motion Activity
 
 
 **Used Program**  
-- MotionActivityTimeAxisIntegrator.m  
-- MotionActivityPlot.m  
+**- MotionActivityTimeAxisIntegrator.m**  
+**- MotionActivityPlot.m**  
 
 ### Count of Most Shifting Joint in Each Frame
 **Used Program**  
-- MotionActivityCounter.m  
-- MotionActivityCountMean.m  
+**- MotionActivityCounter.m**  
+**- MotionActivityCountMean.m**  
 

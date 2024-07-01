@@ -106,6 +106,7 @@ And
 
 ## Analysis of Kinect-Based Motion Data (Work in Progress)
 After recording the motion data, you can analyze motion data by these programs for MATLAB.  
+At first, you have to export the data of motion activity's set by MATLAB, then you can get time series graph of motion activity or counts of most shifting joint in each frame.  
 
 ### Exporting Motion Data as txt File
 $` 
@@ -131,21 +132,23 @@ $`
 `$ ... (2)  
 
 To analyze the motion data, I referred to the equation of the video viewer’s motion activity in (*Hanjalic’s study*)[https://doi.org/10.1109/ICME.2003.1221610]. The equation is used for analysis of viewer’s block-based motion in video, and I redefined the equation for kinect-based motion as shown in Eqs. (1) and (2).  
-- $`m(k)`$ : Motion activity () between kth to k+1th frames  
-- $`|\vec{v_{j}(k)}|`$ :Each joint’s coordinate parallel moving distance  
+- $`m(k)`$ : Set of each joint's motion activity (coordinate parallel moving distance) between kth to k+1th frames  
+- $`|\vec{v_{j}(k)}|`$ :Each joint’s motion activity between kth to k+1th frames  
 - $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints))  
 
-In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ . On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion,
+In Eq. (1), the motion activity is expressed in ratio of the average of the parallel shifting motion’s distance $`|\vec{v_{j}(k)}|`$ to the distance of the most parallel shifting motion $`|\vec{v_{max}(k)}|`$ . On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion.
 
 **Used Program**  
-- MotionActivityExporter.m   
+- MotionActivityExporter.m: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txt file which include set of motion activity calculated by each equation. 
 
 ### Time Series Graph of Motion Activity
+
+
 **Used Program**  
 - MotionActivityTimeAxisIntegrator.m  
 - MotionActivityPlot.m  
 
-### Count of Most Shifting Joint in Each Frame (Using Motion Activity)
+### Count of Most Shifting Joint in Each Frame
 **Used Program**  
 - MotionActivityCounter.m  
 - MotionActivityCountMean.m  

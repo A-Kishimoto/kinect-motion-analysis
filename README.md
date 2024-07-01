@@ -104,7 +104,7 @@ And
 ```
    - If the renamed bodyTrackingDemo.m works, new folder is created and motion data of each joint's coordinate are exported in the file.
 
-## Analysis of Kinect-Based Motion Data (Work in Progress)
+## Analysis of Kinect-Based Motion Data
 After recording the motion data, you can analyze motion data by these programs for MATLAB.  
 At first, you have to export the data of motion activity's set by MATLAB, then you can get A. time series graph of motion activity or B. counts of most shifting joint in each frame.  
 

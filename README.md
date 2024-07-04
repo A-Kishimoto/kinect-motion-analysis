@@ -183,7 +183,7 @@ s_{j} \\
 Other analysis using motion activity is calculating the counts of most shifting joint in each frame. In 2 programs (MotionActivityCounter.m and MotionActivityCountMean.m), you can also  calculate scores of all joint’s count when the number of interflames is supposed to be 1.
 - $`\vec{C}`$ : The set of all joints' count of most shifting joint in each frame  
 - $`C_{j}`$ :Joint $`j`$ ’s count increasing by 1 when $`|\vec{v_{j}(k)}|`$ is maximum value in each frame. The initial value is 0.  
-- $`\vec{s}`$ : Scores of all joint’s count when $`\vec{s}`$ = 1
+- $`\vec{s}`$ : Scores of all joint’s count when $`|\vec{s}|`$ = 1
 - $`j`$ : Index of joints (There are 32 joints. Please refer to [*here*](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints)) 
 
 **Used Program**  

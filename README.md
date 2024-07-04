@@ -7,8 +7,8 @@ In These Programs, there are 2 types of analyzing motion data: A. **Time series 
 ### Installation of SDK
 To use Azure Kinect, Several SDKs are needed to be installed.  
 
-**1. CUDA (For NVIDIA)** ([*Download CUDA*](https://developer.nvidia.com/cuda-downloads?/))  
-  - CUDA is needed if you have yet to install.
+**1. CUDA (For NVIDIA) & Build Tools for Visual Studio** ([*Download CUDA*](https://developer.nvidia.com/cuda-downloads?/),[*Download Built Tools for VS*](https://visualstudio.microsoft.com/downloads/))  
+  - These are needed if you have yet to install.
 
 **2. Azure Kinect SDK** ([*Download Azure Kinect SDK*](https://github.com/microsoft/Azure-Kinect-Sensor-SDK/blob/develop/docs/usage.md))  
   - Please check your computer's compatibility with the version of SDK (In this case, the version is 1.4.1.).  

@@ -110,7 +110,15 @@ At first, you have to export the data of motion activity's set by MATLAB, then y
 
 ### Exporting Motion Data as txt File
 $` 
-\vec{m(k)} = 100 \cdot 
+\vec{m(k)}
+= \left(
+\begin{array}{c}
+m_{1}(k) \\
+m_{2}(k) \\
+\vdots \\
+m_{j}(k) \\
+\end{array} \right)
+= 100 \cdot 
 \left(
 \begin{array}{c}
 |\vec{v_{1}(k)}| \\
@@ -121,8 +129,15 @@ $`
 `$ ... (1)  
 
 $` 
-\vec{m(k)} =
-\left(
+\vec{m(k)}
+= \left(
+\begin{array}{c}
+m_{1}(k) \\
+m_{2}(k) \\
+\vdots \\
+m_{j}(k) \\
+\end{array} \right)
+= \left(
 \begin{array}{c}
 |\vec{v_{1}(k)}| \\
 |\vec{v_{2}(k)}| \\
@@ -155,32 +170,42 @@ After that, you can draw the time series graph of motion activity's mean by MATL
 
 ### B. Count of Most Shifting Joint in Each Frame  
 $` 
-\begin{split}
-&\vec{C} =
+\vec{C} =
 \left(
 \begin{array}{c}
 C_{1} \\
 C_{2} \\
 \vdots \\
 C_{j} \\
-\end{array} \right)  \;\;\;
-&\vec{s} =
+\end{array} \right)  \;\;\; (j = 1, 2, 3, \ldots, 32),  \\
+`$ ... (3)  
+
+                              initial value: $`C_{j} = 0`$  
+                                  for $`k = 1, 2, 3, \ldots, K`$  
+                                      if $`\max\vec{m(k)} = m_{j}(k)`$  
+                                          $`C_{j} = C_{j} + 1`$  
+
+$` 
+\vec{s} =
 \left(
 \begin{array}{c}
 s_{1} \\
 s_{2} \\
 \vdots \\
 s_{j} \\
-\end{array} \right)  \;\;\; (j = 1, 2, 3, \ldots, 32)  \\
-\\
-&\mbox{initial value: }s_{j} = 0\\
- \mbox{for }&k = 1, 2, 3, \ldots, K \\
- \mbox{ if }&\max\vec{m(k)} = |\vec{v_{i}(k)}| \\
-&s_{i} = s_{i} + 1 \\
- \end{split} 
-`$ ... (3)  
+\end{array} \right)
+= \vec{C} / K =
+\left(
+\begin{array}{c}
+C_{1} \\
+C_{2} \\
+\vdots \\
+C_{j} \\
+\end{array} \right)/ K
+\;\;\; (j = 1, 2, 3, \ldots, 32),  \\
+`$ ... (4) 
 
-Other analysis using motion activity is calculating the counts of most shifting joint in each frame. In 2 programs (MotionActivityCounter.m and MotionActivityCountMean.m), you can also  calculate scores of all joint’s count when the number of interflames is supposed to be 1.
+Other analysis using motion activity is calculating the counts of most shifting joint in each frame. In 2 programs (MotionActivityCounter.m and MotionActivityCountMean.m), you can also calculate scores of all joint’s count by Eq.(4) when the number of interflames is supposed to be 1.
 - $`\vec{C}`$ : The set of all joints' count of most shifting joint in each frame  
 - $`C_{j}`$ :Joint $`j`$ ’s count increasing by 1 when $`|\vec{v_{j}(k)}|`$ is maximum value in each frame. The initial value is 0.  
 - $`\vec{s}`$ : Scores of all joint’s count when $`|\vec{s}|`$ = 1

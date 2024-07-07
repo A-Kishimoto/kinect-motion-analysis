@@ -141,7 +141,7 @@ In Eq. (1), the motion activity is expressed in ratio of the average of the para
 On the other hand, we provide Eq. (2), which does not include $`|\vec{v_{max}(k)}|`$ as the distance of the most parallel shifting motion.
 
 **Used Program**  
-- **MotionActivityExporter.m**: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txt file which include set of motion activity calculated by each equation. 
+- **MotionActivityExporter.m**: Importing recorded motion data in the file, calculating motion activity and exporting motion activity in txt file. 2 txts file which include set of motion activity calculated by each equation. 
 
 ### A. Time Series Graph of Motion Activity
 ![Time Series Graph of Motion Activity](img/MeanOfMotionActivity.png)

@@ -170,40 +170,50 @@ After that, you can draw the time series graph of motion activity's mean by MATL
 
 ### B. Count of Most Shifting Joint in Each Frame  
 $` 
-\vec{C} =
-\left(
+\vec{C}
+= \left(
 \begin{array}{c}
 C_{1} \\
 C_{2} \\
 \vdots \\
 C_{j} \\
-\end{array} \right)  \;\;\; (j = 1, 2, 3, \ldots, 32),  \\
+\end{array} \right) \;\;\; (j = 1, 2, 3, \ldots, 32)
 `$ ... (3)  
 
-                              initial value: $`C_{j} = 0`$  
-                                  for $`k = 1, 2, 3, \ldots, K`$  
-                                      if $`\max\vec{m(k)} = m_{j}(k)`$  
-                                          $`C_{j} = C_{j} + 1`$  
+$`
+\text{initial value: $C_{j} = 0$}
+`$
 
-$` 
-\vec{s} =
-\left(
-\begin{array}{c}
+$`
+\text{for $k = 1, 2, 3, \ldots, K$}
+`$
+
+$`
+\qquad\text{if $\max\vec{m(k)} = m_{j}(k)$}
+`$
+
+$`
+\qquad\qquad\text{$C_{j} = C_{j} + 1$}
+`$  
+
+$`
+\vec{s}
+= \left(
+\begin{array}{s}
 s_{1} \\
 s_{2} \\
 \vdots \\
 s_{j} \\
-\end{array} \right)
-= \vec{C} / K =
-\left(
-\begin{array}{c}
+\end{array} \right) 
+= \vec{C} / K
+= \left(
+\begin{array}{s}
 C_{1} \\
 C_{2} \\
 \vdots \\
 C_{j} \\
-\end{array} \right)/ K
-\;\;\; (j = 1, 2, 3, \ldots, 32),  \\
-`$ ... (4) 
+\end{array} \right) / K \;\;\; (j = 1, 2, 3, \ldots, 32)
+`$ ... (4)  
 
 Other analysis using motion activity is calculating the counts of most shifting joint in each frame. In 2 programs (MotionActivityCounter.m and MotionActivityCountMean.m), you can also calculate scores of all joint’s count by Eq.(4) when the number of interflames is supposed to be 1.
 - $`\vec{C}`$ : The set of all joints' count of most shifting joint in each frame  
